@@ -1,0 +1,58 @@
+<!--by default flex-direction is set to row so in this case the main axis is from left to right and the cross axis is from top to bottom.
+if you set flex-direction to column then the elemens will stack from top to bottom so the main axis will be from top to bottom and the cross axis will be from left to right.
+Flex-direction property is set on parent i.e the container of flexbox.
+Another property is the flex-basis which is a property of the child and it acts like the width of the element if the flex-direction is row and acts like a height if the flex direction is column.
+gap property is parent's property.
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flex Direction</title>
+  <!-- HINT:
+  https://developer.mozilla.org/en-US/docs/Web/CSS/Universal_selectors
+  https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Selectors/Combinators 
+  -->
+  <style>
+    .container {
+      color: white;
+      border: 5px solid gold;
+      display: inline-flex;/*to make the width of the flexbox equal to the widest element.*/
+      flex-direction:column;
+    }
+
+    /*
+Select all the elements that are the direct
+children of the .container class.
+    */
+   .container > * /*to select all the elements of container*/
+   {
+    flex-basis:100px;
+   }
+
+    .red {background-color: #eb4d4b;}
+    .orange {background-color: #f0932b;}
+    .yellow {background-color: #f6e58d;}
+    .green {background-color: #6ab04c;}
+    .blue {background-color: #4834d4;}
+    .indigo {background-color: #30336b;}
+    .purple {background-color: #be2edd;}
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="red">Red</div>
+    <div class="orange">Orange</div>
+    <div class="yellow">Yellow</div>
+    <div class="green">Green</div>
+    <div class="blue">Blue</div>
+    <div class="indigo">Indigo</div>
+    <div class="purple">Purple</div>
+  </div>
+  
+</body>
+
+</html>

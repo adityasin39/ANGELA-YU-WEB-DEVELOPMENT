@@ -1,0 +1,62 @@
+<!--consider a grid which has 4 divs.
+If i set the grid-template-rows:100px 200px and grid-template-columns:400px 800px then we will get a grid with the mentioned row and column sizes but as they are fixed so they wont be responsive. Same is the case with rem.
+The shorthand is also available which is like grid-template: 100px 200px / 400px 800px;
+If i set the grid-template-rows: 100px auto and grid-template-columns: 200px auto then as the second row height is set to auto so the height becomes enough to accomodate the second row content. But in the case of second column width which is also set to auto, it will be extensible and will also shrink and will always occupy the 100% of the screen.
+Head over to https://appbrewery.github.io/grid-sizing/ for better understanding.
+If i set the grid-template-rows: 1fr 2fr;
+             grid-template-columns: 1fr 2fr; then as expected this will be responsive.
+If i set the grid-template-rows: 100px 200px and grid-template-columns: 100px minmax(400px,800px); then the second column width will be 800px if there is space otherwise on shrinking will shrink uptill 400px and then will go out of the screen.
+If i want to repeat a row or a column size multiple number of times then this can be done with the help of repeat function like grid-template-rows: repeat(2,200px) and grid-template-columns:repeat(2,100px).
+But what if we have a grid which is larger than the number of grid items like if we have 2X3 grid ie. 2 rows and 3 cols then the third div will occupy the third column because a grid is filled from the top-left to the bottom-right.
+But what if there are more grid items but the size of the grid is smaller then in such a case the extra items will have the height as auto which will be just enough to occupy the content and the width will be equal to the column width below which it is present and this extra div will also follow top-left to bottom-right rule.
+So if you think that in the future, you will add more divs and if you want to have your own height of the new divs then you can do like grid-auto-rows:300px then all the new divs wont have auto and will have 300px as height conforming to top-left to bottom-right rule.
+ To understand better try the test from https://appbrewery.github.io/grid-sizing/            -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="google" content="notranslate">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grid Fundamentals</title>
+  <style>
+    body {
+      font-family: sans-serif;
+    }
+
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      height: 100vh;
+      background-color: #f2f2f2;
+    }
+
+    .item {
+      width: 200px;
+      margin: 20px;
+      background-color: #3498db;
+      color: #fff;
+      text-align: center;
+      line-height: 2;
+      font-size: 24px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h1>Grid Sizing</h1>
+    <a class="item" href="./fixed-size.html">Fixed Size</a>
+    <a class="item" href="./auto-size.html">Auto Size</a>
+    <a class="item" href="./fractional-size.html">Fractional Size</a>
+    <a class="item" href="./minmax-size.html">MinMax Size</a>
+    <a class="item" href="./repeat.html">Repeat</a>
+    <a class="item" href="./test.html">Test</a>
+
+
+  </div>
+</body>
+
+</html>

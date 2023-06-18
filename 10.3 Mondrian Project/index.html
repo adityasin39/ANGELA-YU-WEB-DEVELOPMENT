@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mondrian Project</title>
+  <style>
+    /* 
+    Write your CSS here 
+    Gap Colour: #000
+    White: #F0F1EC
+    Red: #E72F24
+    Black: #232629
+    Blue: #004592
+    Yellow: #F9D01E
+
+    For dimensions, see dimensions.png image.
+    HINT: Remember you can't change the properties of grid lines.
+    But grid lines are transparent!
+    */
+    .grid-container
+    {
+      display: grid;
+      grid-template: 414px 314px 20px / 320px 428px;
+      gap: 9px;
+      background-color:#232629;
+    }
+    .red
+    {
+      background-color:#E72F24;
+
+    }
+    .top-right
+    {
+      background-color: #F0F1EC;
+    }
+    .bottom-left
+    {
+      background-color: #F0F1EC;
+    }
+    .bottom-right
+    {
+      display: grid;
+      grid-template: 314px / 351px 50px;
+      gap:9px;
+    }
+    .bottom-right-left
+    {
+      background-color: #F0F1EC;
+    }
+    .bottom-right-right
+    {
+     display:grid;
+     grid-template: 130px 155px/ 50px; 
+     gap:10px;
+    }
+    .bottom-right-right-top
+    {
+      background-color:#004592 ;
+
+    }
+    .bottom-right-right-bottom
+    {
+      background-color: #F0F1EC;
+    }
+    .last-left
+    {
+      background-color: #F0F1EC;
+    }
+    .last-right
+    {
+      display: grid;
+      grid-template: 20px/ 198px 153px 50px;
+      gap:9px;  
+    }
+    .yellow
+    {
+      background-color:#F9D01E;
+    }
+    .allblack
+    {
+      background-color:#232629 ;
+    }
+    .allwhite
+    {
+      background-color: #F0F1EC;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Write your HTML here -->
+  <div class="grid-container">
+    <div class="red"></div>
+    <div class="top-right"></div>
+    <div class="bottom-left"></div>
+    <div class="bottom-right">
+      <div class="bottom-right-left"></div>
+      <div class="bottom-right-right">
+        <div class="bottom-right-right-top"></div>
+        <div class="bottom-right-right-bottom"></div>
+      </div>
+    </div>
+    <div class="last-left"></div>
+    <div class="last-right">
+      <div class="yellow"></div>
+      <div class="allblack"></div>
+      <div class="allwhite"></div>
+    </div>
+    
+  </div>
+</body>
+
+</html>

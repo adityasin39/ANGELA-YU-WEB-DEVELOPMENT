@@ -1,0 +1,25 @@
+h1{
+    color:blue;
+  }
+  p{
+    color:deepskyblue;
+  }
+  hr
+  {
+    border-color: darkturquoise;
+    border-style: dotted none none; 
+    border-width: 5px;
+    width:30%;
+  }
+  h3{
+    color:blueviolet;
+  }
+  ul{
+    color:cornflowerblue;
+  }
+  table{
+    color:darkcyan;
+  }
+  body{
+    background-color:aliceblue;
+  }

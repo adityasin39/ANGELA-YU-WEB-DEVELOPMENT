@@ -1,0 +1,47 @@
+<!--The smallest unit of a grid is a grid cell which is the intersection of the rows and the columns.These can be of different sizes.Multiple cells can be occupied by a grid item.
+The lines which separate the different rows and columns are called the grid lines.These lines width, height can be increased because of gap property and we cant give color to these lines.-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grid Placement</title>
+  <style>
+    body {
+      padding: 0;
+      margin: 0;
+    }
+
+    .container {
+      height: 100vh;
+      display: grid;
+      gap: 3rem;
+      grid-template-columns: 1fr 1fr 1.5fr;
+      grid-template-rows: 1fr 1fr;
+    }
+
+    .item {
+      font-size: 5rem;
+      color: white;
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: blueviolet;
+      /* TODO: Use Flexbox to align the text to the center horizontally and vertically. 
+      See goal1 image.
+      */
+      display:flex;
+      align-items:center;
+      justify-content: center;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="item cowboy">🤠</div>
+    <div class="item astronaut">👨‍🚀</div>
+    <div class="item book">📖</div>
+  </div>
+</body>
+
+</html>

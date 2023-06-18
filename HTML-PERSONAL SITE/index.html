@@ -1,0 +1,148 @@
+<!-- we can use html tables as layouts for our website like if i want to have my photo on the left and some content on the right without using CSS then this can be done with the help of tables as done from lines 11 to 25-->
+<!-- the problem with inline css is that if we have to apply the same style to many hr or any other element then i will have to copy and paste it everywhere which is not at all good and always has chances of error-->
+<!--so we can have an internal css which is written after title in the head and we have to write only once and the style will get applied to all-->
+<!-- internal css is written in the style tag-->
+<!--but if i have multiple webpages and if i want to have the changes on all the webpages then i need to do external css-->
+<!--in external css, we create a .css file and then write the same thing written in the internal css without the style tag-->
+<!-- we then write a tag named link which has an attribute rel which is set to stylesheet and the href is set to the relative path of the css file where the external css is written and this link tag has to be written in each html file-->
+<!-- if a path has / in the beginning then it means that is starting from the root which can cause problems if our site is not live so better write relative path names-->
+<!-- if a website has all inline css, internal,external css and if some same property is being changed in inline,internal,external css for e.g. if the background-color is set to different colors in each css type then the browser gives preference in the following order inline->internal->external-->
+<!-- there is always some default CSS that every browser applies-->
+<!--by default the border style of hr element is set to inset and height is set to 0 and border width is set to 1px-->
+<!--there are a lot of border styles but we wanted to have dotted and also we didnt want left,right and bottom parts of the border-->
+<!--if you give 4 values in the border style property then the values will be in the order top,right,bottom,left-->
+<!-- in the case of 3 values, top will be first and then the second value will get applied to both left and right and the third will be applied to the bottom one-->
+<!-- on setting none to border style that part of the border disappears-->
+<!--in href of link if the path starts from / then it will create problems-->
+<!--to change the color use color not background color and by changing border-width the width of the border changes but by changing only width the length of the border changes .We can even have a percentage of the screen as the width and this will get adjusted on all types of devices like phones,laptops-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>❤️ Agastya's Personal Site</title>
+    <link rel="stylesheet" href="./styles/external.css"> <!--this must be included for external css to work-->
+    <!--the following is the code for internal css-->
+    <!--if border style of hr is set to none and no height is set then the horizontal rule will disappear as the default height is 0 and you have disabled the borders too-->
+    <!--
+    <style> 
+      h1{
+        color:blue;
+      }
+      p{
+        color:deepskyblue;
+      }
+      hr
+      {
+        we can give background color too but as we want 0 height so the color wont be visible
+        border-color: darkturquoise;
+        height:100px; height is the distance from the top border to the bottom border and by default it is set to 0 here we dont need height as we are using only top border         
+        border-style: dotted none none;  can also be written as border-style: none; and then border-top-style:dotted;
+        border-width: 5px; to change the size of the border
+        width:30%;
+      }
+      img
+      {
+        height:20px;
+      }
+    </style>
+  -->
+  </head>
+  <body style="background-color:aliceblue;"><!-- style is an attribute of body but background-color is CSS. we can use hex codes too with a # or write the specific color name. This is inline CSS-->
+    <table cellspacing="20">  <!-- by default the two cells of a table are very close so we can have some space between them by using cellspacing attribute-->
+      <tr>
+        <td> <img src="data:image/jpeg;base64,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" alt="Aditya Singh Profile Picture"></td>
+        <td> 
+    <h1>Aditya Singh</h1>
+    <p style="color:steelblue">
+      <em>Founder of <strong>❤️ Agastya's Personal Site </strong></em>
+    </p>
+    <p>
+      I am a student of Angela Yu, learning web development from her since two
+      days.
+    </p>
+  </td> 
+  </tr>
+  </table>
+    <hr>
+    <h3>Education</h3>
+    <ul>
+      <li>
+        <strong>People's Welfare Society's High School </strong> - Grade 5 to
+        Grade 8
+      </li>
+      <li>
+        <strong>Vidya Vikasini's High School</strong>- Grade 9 to Grade 10
+      </li>
+      <li><strong> Allen Career Institute</strong> - Grade 11 to Grade 12</li>
+      <li><strong><a draggable=true href="https://www.bitmesra.ac.in/"> Birla Institute of Technology, Mesra</a></strong>-2021-2025</li>
+    </ul>
+    <hr>
+    <h3>Skills</h3>
+    <table border="1"> <!-- border is to give border to a table with size 1 here-->
+      <thead><!-- by default comes in bold and is used to give column names-->
+        <tr>
+        <th>Domain</th><!-- table header cell. we will get the same result even if we put these th lines normally like a row as the browser will understand that the th represents header as mentioned from line no 41 to 45 -->
+        <th>Languages used</th> 
+        </tr>
+      </thead>
+      <tbody>
+      <!--
+        gives same output without thead but it is better to have the header part in the thead and body in tbody and footer in tfoot
+      <tr>
+        <th>Domain</th>
+        <th>Languages used</th>  
+      </tr>
+      -->
+      <tr>
+        <td>DSA</td>
+        <td>C++,C</td>
+      </tr>
+      <tr>
+        <td>Web development</td>
+        <td>HTML,CSS,JAVASCRIPT,REACT</td>
+      </tr>
+      </tbody>
+      <tfoot>
+      </tfoot>
+    </table>
+    <hr>
+    <h3>Extracurriculars</h3>
+    <table border="1">
+      <tr>
+        <td>
+          <table>
+            <tr>
+              <td>Singing</td>
+              <td>⭐⭐⭐⭐</td>
+            </tr>
+            <tr>
+              <td>Dancing</td>
+              <td>⭐⭐</td>
+            </tr>
+          </table>
+        </td>
+        <td>
+          <table>
+            <tr>
+              <td>Gaming</td>
+              <td>⭐⭐⭐⭐⭐</td>
+            </tr>
+            <tr>
+              <td>Sports</td>
+              <td>⭐</td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+    <a href="C:\ANGELA YU WEB DEVELOPMENT\HTML-PERSONAL SITE\hobbies.html">My Hobbies</a>
+    <!-- or <a href="hobbies.html">My Hobbies</a> this is possible when hobbies.html is in the same folder as index.html -->
+    <br>
+    <a href="contacts.html">Contact Me</a>
+    <footer > <!-- footer is used to have authors name or copyright at the end mainly-->
+      <p style="color: black;">Copyright © 2023 Aditya Singh . All Rights Reserved.</p>
+    </footer>
+  </body>
+</html>

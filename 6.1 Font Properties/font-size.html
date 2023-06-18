@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<!--Point is a unit which is larger than a pixel and is static and is used as pt.
+em is a unit which is a relative unit and it is relative to the parent(closest). It is 100% of the parent like for e.g . if we have h1 in a body and if the font-size of the body is set to 20px and the h1 is set to 1em then it means 20px and if it is 2em then 40px and so on.
+rem is a unit which is a relative unit and it is relative to the root(which is ofcourse the html element).It is 100% of the root like for e.g. if the font-size of html is 20px and if the font size of h1 is 1rem then it is 20px and if 2rem then 40px and so on.
+rem is a better unit as it is relative to the root so on changing the font-size of the parent doesnt affect the font-size of the one using rem.
+there are also word based font sizes like large,medium.
+font-weight can be relative to parent too like lighter or bolder. Ligher means it will minus 100 and bolder means it will plus 100 write font-weight:lighter; to use it.
+font-weight can be used as a number too where its range is 100-900. larger the number bolder the font.
+-->
+<head>
+  <meta charset="UTF-8">
+  <title>Font-Size</title>
+  <style>
+    #pixel {
+      font-size: 20px;
+    }
+
+    #point {
+      font-size: 20pt;
+    }
+
+    #em {
+      font-size: 1em;
+    }
+
+    #rem {
+      font-size: 1rem;
+    }
+
+    footer {
+      font-size: 12pt;
+    }
+
+    html {
+      font-size: xx-large;
+    }
+  </style>
+</head>
+<html lang="en">
+
+<body>
+  <p id="pixel">1 Pixel is 1/96 of an Inch</p>
+  <p id="point">1 Point is 1/72 of an Inch</p>
+  <footer>
+    <p id="em">1em is 100% the size of the parent element</p>
+    <p id="rem">1rem is 100% the size of the root element</p>
+  </footer>
+</body>
+
+</html>

@@ -1,0 +1,224 @@
+<!--The 12 column layout system of bootstrap is made with the help of 3 components, the first is a div which has a class named container and then inside that div we have another div with a class named row and inside this div we have our items in a column system.
+<div class="container">
+  <div class="row">
+    <div class="col">Hello</div>
+  </div>
+<div> Hello is an item.If you have multiple items with class col then bootstrap gives equal space to all the items across the entire width of the container.
+Bootstrap can give our container responsiveness on different screen sizes without using media query.Just write .container-sm or .container-md, etc. to have the effect. Head over to the container tab in the layout section of the bootstrap website.
+Instead of just writing col we can write col with a number like col-3 and this will make use of 12 column layout system. Also you can have different sizes for different screen sizes by using sm,md,etc. like col-lg-2 and you write multiple separated by a space.Head over to bootstrap breakpoints in the layout section of the bootstrap website.
+If you write col-sm only for each item  then all the items will get equal width for >=mobiie size. But below the defined size like if i have defined size for md only then for sizes below md, all items will take 100% of the width.
+For a single item you can have multiple breakpoints like col-md-2 col-lg-4; Head over to https://appbrewery.github.io/bootstrap-layout/ to practice on 12 column layout system.
+ans 1.Modify the HTML code for the purple boxes below so it behaves like the green ones. 
+  <div class="row">
+    <div class="col-xl-6 col-sm-12">50% desktop, 100% mobile</div> if you dont write col-sm-12 then too you would get the same answer because of the default property that all take 100% width below defined breakpoint.
+    <div class="col-xl-6 col-sm-12">50% desktop, 100% mobile</div>
+  </div>
+ans 2.<div class="row">
+    <div class="col-lg-6 col-sm-12 col-10 ">Column 1</div>
+    <div class="col-lg-3 col-sm-6 col-10">Column 2</div>
+    <div class="col-lg-3 col-sm-6 col-10">Column 3</div>
+  </div>
+ans 3.<div class="row">
+        <div class="col-xxl-1 col-xl-2 col-lg-4 col-md-6">Column 1</div>
+        <div class="col-xxl-11 col-xl-10 col-lg-8 col-md-6">Column 2</div>
+      </div> 
+    To get svgs, go to icons on the bootstrap website and copy the html code and paste in your required place.
+  If you find that any bootstrap component is missing like some svg of features then go to inspect and copy the css of that svg and paste it here in the style section.
+To make anything responsive, put that in the container class.
+To get the margin, padding in bootstrap, go to spacing of the utilities section. eg. mb-3
+To add dark mode, simply write data-bs-theme="dark" after lang="en" in the html tag.
+You can use w3schools template or you can get free themes online.-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bootstrap Components</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+  <style>
+  img{
+    height:20px;
+  }
+  body
+  {
+    background-color:beige;
+  }
+  .card
+  {
+    height: 400px;
+    width:400px;
+    position:relative;
+    left:100px;
+  }
+  .gta5
+  {
+    height: 400px;
+    width:400px;
+  }
+  .rdr2
+  {
+    height: 400px;
+    width:400px;
+  }
+  .bully
+  {
+    height: 400px;
+    width:400px;
+  }
+  .mp3
+  {
+    height: 400px;
+    width:400px;
+  }
+  .slide
+  {
+    height: 500px;
+    width:500px;
+  }
+  .car
+  {
+    height: 500px;
+    width:500px;
+  }
+  .container
+  {
+    display:flex;
+    justify-content: center;
+    margin: 100px auto;
+  }
+  </style>
+</head>
+
+<body>
+  <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+    <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 link-body-emphasis text-decoration-none">
+      
+    </a>
+
+    <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+      <li><a href="#" class="nav-link px-2 link-secondary"> <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Rockstar_Games_Logo.svg/1200px-Rockstar_Games_Logo.svg.png"> Rockstar Games</a></li>
+      <li><a href="#" class="nav-link px-2 link-body-emphasis">Games</a></li>
+      <li><a href="#" class="nav-link px-2 link-body-emphasis">Newswire</a></li>
+      <li><a href="#" class="nav-link px-2 link-body-emphasis">Social Club</a></li>
+    </ul>
+
+    <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
+      <input type="search" class="form-control" placeholder="Search..." aria-label="Search">
+    </form>
+
+    <div class="dropdown text-end">
+      <a href="#" class="d-block link-body-emphasis text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
+          <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3Zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"/>
+        </svg>
+      </a>
+      <ul class="dropdown-menu text-small" style="">
+        <li><a class="dropdown-item" href="#">Profile</a></li>
+        <li><a class="dropdown-item" href="#">Settings</a></li>
+        <li><hr class="dropdown-divider"></li>
+        <li><a class="dropdown-item" href="#">Sign out</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="container col-xxl-8 px-4 py-5">
+    <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+      <div class="col-10 col-sm-8 col-lg-6">
+        <img src="https://pbs.twimg.com/media/FqyD9lQWcAARmFw?format=jpg&name=4096x4096" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700" height="500" loading="lazy">
+      </div>
+      <div class="col-lg-6">
+        <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">Grand Theft Auto Online</h1>
+        <p class="lead">Los Santos Drug Wars The Last Dose Out Now.</p>
+        <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+          <button type="button" class="btn btn-primary btn-lg px-4 me-md-2">Watch Now</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row row-cols-1 row-cols-md-2 g-4">
+    <div class="col">
+      <div class="card">
+        <img class="gta5" src="https://m.media-amazon.com/images/I/91T0XQv8gEL._AC_UF1000,1000_QL80_.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          
+          
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card">
+        <img class="rdr2" src="https://s.rsg.sc/sc/images/react/games/boxart/rdr2.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          
+          
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card">
+        <img class="mp3"src="https://images.ctfassets.net/wn7ipiv9ue5v/3J3gA18Jr0GjJK76Khl9jR/e2096a61d96292ed316d611019df3ae2/MP3_FOB_1212x1497.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+         
+          
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card">
+        <img class="bully" src="https://images.ctfassets.net/wn7ipiv9ue5v/4yb8h87qRjvnQRno2GHAeE/522e872bc1d5fcf56e84bdce0821c610/BULLY_SE_FOB_1212x1497_LOGO_V01.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+        
+         
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+  <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img  class="car" src="https://www.cnet.com/a/img/resize/9d4b46a4a2dc6024417d410f3f2ed9ff67b232a3/hub/2021/10/08/7e0e7bc5-2d26-400e-8a16-c1a82c686a87/far-cry-6-benchmark-cpu-bottleneck.jpg?auto=webp&fit=crop&height=900&width=1200" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img class="car" src="https://i0.wp.com/insider-gaming.com/wp-content/uploads/2022/12/cyberpunk-2077-game-of-the-year-edition-scaled-e1670012903149.jpg?fit=1920%2C1080&ssl=1" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img class="car" src="https://image.api.playstation.com/vulcan/ap/rnd/202008/1020/b0OfuUs4lHGWG4VNlHcXwL5a.jpg" class="d-block w-100" alt="...">
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+    </div>
+  </div>
+  <footer class="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5 my-5 border-top">
+    <div class="col mb-3">
+      <a href="/" class="d-flex align-items-center mb-3 link-body-emphasis text-decoration-none">
+        <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>
+      </a>
+      <p class="text-body-secondary"> Rockstar Games</p>
+    </div>
+
+    <div class="col mb-3">
+
+    </div>
+
+    <div class="col mb-3">
+      <h5>Careers</h5>
+      <ul class="nav flex-column">
+        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Contact</a></li>
+        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Subscribe</a></li>
+       
+      </ul>
+    </div>
+</footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+</body>
+
+</html>

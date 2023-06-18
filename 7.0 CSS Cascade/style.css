@@ -1,0 +1,24 @@
+/* Don't change the existing CSS. */
+
+.box {
+  background-color: blue;
+  padding: 10px;
+}
+
+p {
+  color: yellow;
+  margin: 0;
+  padding: 0;
+}
+.inner-box
+{
+  background-color: red;
+}
+.white-text
+{
+  color:white; /* if this were written in the inner box then too the text wont become white because inner box is less specific than the paragraph.Because paragraph is inside the div thats why.*/
+}
+#outer-box
+{
+  background-color:purple;
+}

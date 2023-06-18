@@ -1,0 +1,94 @@
+<!--Similar to CSS, we can add javascript to our website by three ways namely inline, internal and external.
+To have inline js, we have attributes like onload,onclick which we write after the element name on which we want to apply js.
+When the browser reaches that line then the js written inside the attribute will get executed.
+So we write javascript code inside attribute's quotation marks as written in body here in this file.
+But we cant use "" again as js code goes inside "" hence instead we can use '' as done in body.
+onload is basically used with body and is an attribute which loads the js before the whole site has finished loading.
+Inline js is not a good practice so better avoid it.
+Internal js is executed by using script tag and type="text/javascript"
+The script tag goes into the body and it is always preferred to have it just before the end of the body tag
+e.g. <script type="text/javascript">
+        alert("Hello");
+</script>
+For external js, just write <script src="" charset="utf-8"></script> at the end of the body tag and in the src attribute, give the path for the external js file and write your js code there.
+  e.g. <script src="./index.js" charset="utf-8"></script>
+If you write the external script line above an element which has some js code associated with it in the external file then you will get error as it will say that h1 is undefined as h1 is below the js line.
+Body wala inline alert baaki saare external and internal alerts ke baad execute hoga because the body alert will execute after the site is fully finished loading.
+Dom
+Whenever the site loads up, our browser makes objects which we can select and manipulate. It is like a tree structure whose root is the document object and the direct child is html.
+if you write document in the console and hit enter then as document includes whole html file thus the output will be the whole file.
+document.firstElementChild; or document.lastElementChild will give html.
+document.firstElementChild.lastElementChild will give body. There is nothing like secondElementChild
+document.firstElementChild.lastElementChild.firstElementChild.nextElementSibling.nextElementSibling; to get button. ie. to use nextElementSibling first reach the top Sibling by doing firstElementChild and then do nextElementSibling 2 times if you want to reach to the 3rd child.
+var heading=document.firstElementChild.lastElementChild.firstElementChild; this gives h1 and is stored in heading
+heading.innerHTML gives Hello. this is get property.
+But if we had any other tag applied on hello like <em>Hello</em> then the innerHTML would be <em>Hello</em> so to actually get the text you can use textContent property which would give Hello.
+heading.innerHTML="Good Bye"; changes h1 to Good Bye
+heading.style.color="green"; changes color to green. this is set property
+document.querySelector("input").click(); selects checkbox and clicks it by using click function.
+method is used for objects and function for non objects.
+// challenge: change the text of third li from third to your name
+document.querySelector("ul").lastElementChild.innerHTML="Aditya"; or document.lastElementChild.lastElementChild.firstElementChild.nextElementSibling.nextElementSibling.nextElementSibling.lastElementChild.innerHTML="Aditya";
+QuerySelector is very versatile and works with tag selectors, class,id, combinational selectors.
+But other than this we have specific things too like getElementsByClassName, getElementsByTagName,getElementById.
+document.getElementsByTagName("li"); this gives an array of li of size 3. So to tap into a particular li we can use indexing like
+document.getElementsByTagName("li")[0]; gives the first li.
+In the case of getElementsByClassName too we get an array but as on a single webpage there is only one id with a particular name so we dont get array in case of getElementById.
+document.getElementsByTagName("li")[2].innerHTML="Sam Altman"; changes text in third li to Sam Altman
+document.getElementsByTagName("li").style.color="red"; this will give error as you cannot apply a property to a whole array instead you have to get a particular li and then you can apply.
+As these return an array so we can apply all functions of an array like length,etc.
+document.getElementsByTagName("li").length; gives 3
+document.getElementsByClassName("btn")[0].style.color="red"; agar sirf ek hi element hai toh bhi indexing use karni hogi because array is returned.
+document.getElementById("title").style.color="green"; isme array nahi return hota
+query selector always returns 1 value and that too the first value encountered.
+document.querySelector("h1");
+document.querySelector("#title");
+document.querySelector(".btn");
+document.querySelector("li>a"); selects www.google.com
+document.querySelector("li.item"); selects first li 
+document.querySelector("#list a"); heirarchical selector, selects a tag
+to get all the elements that satisfy the querySelector use querySelectorAll instead and then specify the index.
+document.querySelector("li").style.color="red"; changes color of only bullet point and not of Google, this is because it is inside a and so we have to use li>a to do that.
+You can change every CSS property by selecting an element and then writing style and then the property name which is the same as CSS but with no space and is Camel Cased in js.
+e.g. document.querySelector("h1").style.fontSize="10rem"; changes font size.
+To get all these names refer to this site https://www.w3schools.com/jsref/dom_obj_style.asp
+document.querySelector(".btn").style.backgroundColor="yellow"; changes the bg color to yellow of button
+But we said earlier that all the syles will be inside our CSS but here we were doing it using js. So the solution to this issue is classList which is the property of every DOM object.
+what we actually do is that we will write all our styles in the CSS but we can toggle or add or remove CSS by using js.
+e.g.document.querySelector(".btn").classList; returns all the class names which is btn
+document.querySelector(".btn").classList.add("visibility"); now if i add a class named visibility in my CSS file and write visibility:hidden then on running this js line, the class gets added to the button and it becomes invisible.
+Thus we can have all the CSS in our stylesheet and we can turn the CSS on and off by classList property.
+e.g. document.querySelector(".btn").classList.remove("visibility"); then this removes the class and its style and the button reappears.
+document.querySelector(".btn").classList.toggle("visibility"); this toggle adds the class if it is misssing and removes if it is present.
+document.querySelector("h1").innerHTML="<em>Hao</em>"; we can add html thru js by using innerHTML property.
+// we can change the attributes too using js
+document.querySelector("li>a").attributes; returns an array of attributes applied to the element
+document.querySelector("li>a").getAttribute("href"); gives the value of the attribute here www.google.com
+document.querySelector("li>a").setAttribute("href","https://www.bing.com"); changes the href value and sets to the second parameter.-->
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>My Website</title>
+    <link rel="stylesheet" href="styles.css">
+
+  </head>
+  <body onload="alert('Hello');">
+    
+    <h1 id="title" >Hello</h1>
+
+    <input type="checkbox">
+
+    <button class="btn">Click Me</button>
+
+    <ul id="list">
+      <li class="item">
+        <a href="https://www.google.com">Google</a>
+      </li>
+      <li class="item">Second</li>
+      <li class="item">Third</li>
+    </ul>
+    <script src="./index.js" charset="utf-8"></script>
+  </body>
+
+</html>

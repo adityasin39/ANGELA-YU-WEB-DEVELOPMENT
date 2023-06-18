@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aditya Singh</title>
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="icon" href="favicon.ico"> <!--to draw a favicon go to favicon.cc and we have to link favicon too but the relationship is icon-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montez&family=Montserrat:wght@100&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!--html divs are used in body only and they are used to divide the webpage in blocks. It is mainly used to give similar style to a group of elements.It itself doesnt have much meaning.When elements are put in a div then they act as a group and then div becomes very useful for layout purposes. It is a container element. It stands for division-->
+    <!--divs are actually boxes and if they dont have any content and also if we havent specified their heigth and width then by default the height will be zero and width will be something by default and the div or box wont get displayed on the screen(because there is no height so the div acts like a line) or even occupy any space and any other div will occupy its space-->   
+    <!--if there is some content in the div but we havent specified the height and width of the div then the div or box will have height equal to the content height and the width will be the whole computer screen as by default div is a block display element-->
+    <!--if there is no content in the div but we have specified the height and width of the div then the div will occupy its space on the website and will get displayed if given any bg color-->
+    <!--if there is content and height and width are also specified then the div will take up space according to the height and width provided-->
+    <!--if there is some content in div and the height given by us is not sufficient to accomodate the content then the content will overflow and go out of the div even though it will work the same as if it is inside the div and on giving colors or aligning in the center everything will work fine-->
+    <!--by default in a heading or a paragraph there is no padding i.e zero padding so the content in a div starts just below the top line of the div without any space but if you see then there is always some white space above and on the left of the div even though it is the first element in the whole code. This is because the heading or paragraph and body have some margin at the top by default, so by making margin-top =0 for body and heading or paragraph(whichever comes first) we can touch our div to the screen edges. The left space is due to body's margin-left so make it zero too in order to touch the div to the left edge-->
+    <!--no need to write px or any unit with 0-->
+    <!--body has margin on all four sides whereas heading and paragraph have margins above and below-->
+    <div class="top-container">
+        <img class="top-cloud" src="./images/CSS - My Site Images/cloud.png" alt="cloud-img">
+        <h1>I'm Aditya</h1>
+        <p>a <span>pro</span>grammer</p>
+        <img class="bottom-cloud" src="./images/CSS - My Site Images/cloud.png" alt="cloud-img">
+        <img src="./images/CSS - My Site Images/mountain.png" alt="mountain-img">
+    </div>
+    <div class="middle-container"></div>
+    <div class="bottom-container"></div>
+</body>
+</html>
+<!--CSS DISPLAY PROPERTY-->
+<!--There are four type of display values: block,inline,inline-block,none-->
+<!--display is a css property.Different elements have different display properties by default but it can be changed.-->
+<!--In block display, there can be only one element on one line and by default the width of block elements is the whole screen and these elements start on a new line.E.g. heading,paragraph,div,ol,ul,li,forms
+In inline display, there can be multiple elements on the same line but the height and width is equal to the length of the content and the width cant be changed.e.g.anchor,span,img
+In inline-block, there can be multiple elements on the same line and also the width can be changed of the element.
+In none display, the element vanishes.
+Span is an inline-level element. It works on a little section of a text.We can underline a text by using text-decoration:underline.
+Block elements always come on a new line and they block other block,inline,inline-block elements from coming on the same line.
+So a block element cant come on a line where there is already an inline element but an inline element can come.
+We can change the default display of any element.e.g. in case of paragraph if i do display:inline then it will become inline so it will lose the property of changing its width.
+By width here we mean that utne width mein koi doosra element nahi aayega uske baad hi aaega.
+We may consider images as inline-block as we can change their widths.
+In display none, the space is also occupied by other elements as if it never existed. There is also one more property to hide elements and that is visibility:hidden, by this the element disappears but its space remains and cant be occupied as if it existed.
+-->
+<!--CSS POSITIONING
+Even before any CSS is applied, our html elements have some default positioning rules specified by the browser.
+These are the rules:1.Content is everything-This means that how big the elements are displayed on the screen depends on the content. It depends on the content's height and width.
+2.Order comes from code-This means that the order in which elements are written in the code, they will get displayed on the screen in the same order.
+3.Children sit on parents-This means that if in an element there is any other element then the child element will be displayed on the parent element i.e. on the z axis of the parent element E.g. a div having h1.If a parent sits on child then the child wont get displayed.
+There are four types of position property values:static,relative,absolute,fixed.
+By default, all the html elements are static. This means everything will get displayed according to the above 3 html rules in the normal flow.
+In the case of position property, we use left,right,top,bottom to position our elements.
+In relative positioning, we do position:relative; and then write something like left:30px; this means that move our html element towards right by 30 px relative to its static position(i.e. the position it would have got if we hadnt specified the position ourselves).
+This 30px will be the distance between the left edge of the default position and the left edge of the new position.
+In relative positioning, a div or html element doesnt push other divs instead it can come over the other div. If we position the div to outside the right side or bottom of the screen then we get a scrollbar and page size increases but if this is done for left side and top side then the div goes outside the screen and disappears.i.e. if a div is touching the left edge of the screen and is of width:200px then on doing right:100px its 100px will vanish on doing right:200px it will go out of the screen and completely vanish and its position can be taken by another div if moved to that position so the div below the vanished div wont come automatically to tbe vanished div's place. 
+This means by positioning a certain element relatively, we cant affect the position of other elements.
+by doing position:relative doesnt do anything, you have to write left:30px or top or whatever.
+Absolute positioning
+In absolute positioning, the element is positioned relative to the closest positioned parent element and if there is no positioned parent element then the div will get positioned relative to the body.For e.g. a div element which is not inside any other element will get positioned relative to body.
+position:absolute and then use left, right,top,bottom
+If there is an image which is inside a div(the div is having width equal to the screen) and near the left edge on the div then if i give the div a position:relative without actually positioning it and if i give position:absolute and right:20px to the image then the image will get positioned according to the div because it is the closest parent which has got some positioning, if the div werent given any positioning then the image would get positioned according to the next closest positioned parent and if there is none then it would get positioned relative to the body.
+So in the above case the image would get positioned 30px away from the right edge of the div.
+In absolute positioning, the element positioned absolute does affect the positions of other elements like if there are 3 boxes in vertical order and if the first box is moved to the right then the below one takes its space as if the absolute positioned box never existed.
+even if the first box is moved to the right by 1px then too the boxes below move as if the first box never existed and the first box totally covers up the second box.
+Like relative positioning, absolute positioned elements too go out of the screen if the right and bottom values are larger than the screen size.
+Fixed positioning
+Elements with fixed positioning are positioned relative to the browser window or the viewport. They remain fixed in their position even when the page is scrolled. Fixed elements are commonly used for creating headers, footers, or sidebars that remain visible at all times.
+position:fixed; and then top, left or whatever and it will stay fixed here.    
+Centering elements.
+Centering horizontally:
+
+To center an element horizontally, you can use one of the following methods:
+
+text-align: center; This property can be applied to a parent container, and it will center the child elements horizontally within that container.
+.container {
+  text-align: center;
+}
+This property centers inline elements,inline-block elements like images,block elements like headings,paragraphs. It is applied to a parent container like if you want the whole content to be centered then use it in body but if you want to specifically center the content of a div then use it in a div.It doesnt center the div itself if you use it in the body or anywhere, to do that use margin property.
+But sometimes there is problem using this property with block elements like heading,paragraph when you change their width from 100% to any other percent, the heading or paragraph moves away from the center so in case of block elements with width not equal to 100% ,it is better to use margin.
+To fix this what we can do is, we can have margin:0 auto 0 auto in the heading or the paragraph which needs to be centered and it gets centered successfully despite not having 100% width.
+margin property is used in the specific element and not in the parent container. 
+
+margin: 0 auto; for block-level elements not having 100% width: This method sets equal left and right margins to "auto," which automatically centers the element horizontally within its parent container.
+
+.element {
+  margin: 0 auto;
+}
+Font styling
+If you change the font-family in the body then whole page's font gets affected so the effect depends on the container on which the font-family is applied.
+If i do font-family:serif then there is no change in the font because by default we already have serif. But on doing font-family:sans-serif we can see the change.
+Actually we have majorly cursive,fantasy,serif,sans-serif font families. In these families, we have many more fonts. By specifying only the font-family we get the default font of that family but if i want for e.g. verdana of the sans-serif then we can write font-family:verdana,sans-serif;
+the line font-family:verdana,sans-serif means that first the browser will try to apply verdana but if the browser or the system doesnt have it installed then it will apply the default sans-serif font which is kind of scary because we want our website to look the way we want it to.
+To get rid of this problem, we can use web-safe fonts which are installed on most operating systems e.g georgia,serif. But then too no font is totally web safe. you can use cssfontstack.com to check different font's availability on mac and windows.
+So to avoid this we can have a stack of fallbacks which we can copy from cssfontstack.com like helvetica-neuve,helvetica,arial,sans-serif. By having multiple fonts we can always have some font on all systems.
+But then too if i want all the users to view the same font then its better to use font-embedding. go to google fonts website to get font-embedding and copy the link and paste it into the head section. This works because if the font is not installed then the browser goes to the location and gets the font.
+After adding the fonts in google fonts copy the particular fonts like merriweather,serif and then paste it into the place where we want to use.
+If you dont have any content to put in your website then you can go to loremipsum.io and use lorem ipsum as a text placeholder.
+Use giphy and flaticon websites to get cool images.
+you can write border properties in a single line e.g. border: 100px solid black first one is the thickness, 3rd one is the color, 2nd is the style.
+In absolute positioning, there is a property called z-index which is by default 0 and it decides which element will go on top of what so if a div has z-index as 50 and another has z-index as 100 then the latter one will be above the other div.But if z-index is not specified then the element absolulely positioned will be above by default which we can change by changing its z-index to negative like -1.

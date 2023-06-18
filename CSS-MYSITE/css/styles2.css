@@ -1,0 +1,194 @@
+.top-container
+{
+   
+    padding-top:100px;
+    line-height: 2;
+    margin-bottom:100px;
+}
+.my-image
+{
+   height:200px;
+}
+.bottom-container
+{
+    background-color: crimson;
+    margin-top:100px;
+    height:100px;
+    position: relative;
+    
+}
+.bottom-container > p{
+   font-weight: bold;
+   color:white;
+   margin:0;
+   position: absolute;
+   bottom:0;
+   font-size:medium;
+   right:0;
+}
+.footer-link
+{
+   text-decoration:wavy;
+   font-size:20px;
+   color:white;
+   margin-top:20px;
+   position:absolute;
+   top:10px;
+}
+.leetcode
+{
+   position:absolute;
+   left:650px;
+}
+.github
+{
+   position:absolute;
+   right:650px;
+}
+body{
+    margin:0; 
+    text-align:center;
+    font-family: sans-serif;
+    background-color: #79E0EE;  
+ }
+ h1{
+     margin:50px auto 0;
+     font-family: 'Montez', cursive;
+    font-size:90px;
+    color:crimson;
+     }
+     .title
+     {
+        color:crimson;
+        font-weight: bold;
+        font-size: 30px;
+     }
+
+ p{
+    font-family: 'Montserrat', sans-serif;
+    font-size:1.4rem;
+ }
+ span{
+    text-decoration:underline;
+ }
+ .bottom-cloud
+ {
+    position:absolute;
+    border-style: solid;
+    border-color: springgreen;
+    border-width:0 0 3px;
+    
+ }
+ .top-cloud
+ {
+  position:relative;
+  left:180px;
+  border-style: solid;
+  border-color: springgreen;
+  border-width:0 0 3px;
+
+ }
+ h3{
+    color:crimson;
+    font-size:30px;
+    font-family: 'Montez', cursive;
+ }
+ a{
+    color:#11999E;
+ }
+ .skill-row
+ {
+    width:50%;
+    margin:100px auto;
+    text-align:left;
+ }
+ .skills-text
+ {
+    line-height: 2;
+    font-family: 'Pangolin', cursive;
+    font-size:20px;
+    color:crimson
+
+ }
+ .computer
+ {
+  width:25%; /*this 25% is according to the closest parent container*/
+  float:left;
+  margin-right:30px;
+
+ }
+ /*to make a button head over to cssbuttoncreator.com*/
+ .chillies
+ {
+  width:25%;
+  float:right;
+  margin-left:30px;
+ }
+ h2{
+   color:crimson;
+   font-size:40px;
+   font-family: 'Montez', cursive;
+ }
+ .info
+ {
+   font-family: 'Pangolin', cursive;
+   color:crimson;
+   width:30%;
+   margin:0 auto;
+   line-height: 2;
+ }
+ hr{
+   border-style:dotted;
+   border-color:darkcyan;
+   border-width:10px 0 0 0;
+   width:5%;
+   margin-top:100px;
+   margin-bottom: 100px;
+ }
+ .contact-me > p{
+   color:crimson;
+   font-weight: bold;
+   font-family: 'Pangolin', cursive;
+   width:30%;
+   margin:40px auto;
+   line-height: 2;
+ }
+ a:hover{
+   color:aqua;
+ }
+ .btn {
+   -webkit-border-radius: 20px;
+   -moz-border-radius: 20px;
+   border-radius: 20px;
+   color: #DD380D;
+   font-family: Georgia;
+   font-size: 16px;
+   font-weight: 300;
+   padding: 16px;
+   background-color: #3DE1F6;
+   -webkit-box-shadow: 1px 1px 15px 0 #99C624;
+   -moz-box-shadow: 1px 1px 15px 0 #99C624;
+   box-shadow: 1px 1px 15px 0 #99C624;
+   border: solid #337FED 1px;
+   text-decoration: none;
+   display: inline-block;
+   cursor: pointer;
+   text-align: center;
+   position:relative;
+   top:20px;
+
+}
+
+.btn:hover {
+   border: solid #ED8833 1px;
+   background: #C4D01E;
+   background-image: -webkit-linear-gradient(top, #C4D01E, #3DF689);
+   background-image: -moz-linear-gradient(top, #C4D01E, #3DF689);
+   background-image: -ms-linear-gradient(top, #C4D01E, #3DF689);
+   background-image: -o-linear-gradient(top, #C4D01E, #3DF689);
+   background-image: -webkit-gradient(to bottom, #C4D01E, #3DF689);
+   -webkit-border-radius: 20px;
+   -moz-border-radius: 20px;
+   border-radius: 20px;
+   text-decoration: none;
+}

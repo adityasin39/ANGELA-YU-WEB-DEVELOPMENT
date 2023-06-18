@@ -1,0 +1,22 @@
+h1{
+    font-family: 'Libre Baskerville', serif;
+    text-transform:uppercase;
+}
+body
+{
+    background-color: black;
+}
+.image
+{
+    width:100%; /*height and width are relative to the parent(here its div)*/
+    border:5px solid white; /* ye bhi toh box hi hai so iske bhi padding ke baad border hi aaega.*/
+}
+div
+{
+    text-align: center;
+    width:50%;
+    margin-top:100px;
+    margin-left:25%;
+    color:white;
+}
+

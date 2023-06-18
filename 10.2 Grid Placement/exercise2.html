@@ -1,0 +1,62 @@
+<!--grid-column: span 2 means that the grid item will occupy two consecutive cells.
+grid-column is a shorthand for grid-column-start: span 2 and grid-column-end:auto
+To get a grid item at a place, you can do grid-column-start:2 and grid-column-end:4 which means start at 2nd line and end at 4th line. We can also use negative values like -1 for righmost line and bottomost line.
+If there is not enough space or cells to span then there will be no change.
+If there are 3 divs and a 2X3 grid and if the first div occupies the first two cells and if you want the second div to go below the first div and take up two cells then you can use order property so that it becomes the last div or bottom-rightmost div and then do grid-column: span 2 or one more way is to use a property called grid-area: 2/1/3/3 here we are specifying line numbers, these numbers are grid-row-start,grid-column-start,grid-row-end,grid-column-end respectively. -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grid Placement</title>
+  <style>
+    body {
+      padding: 0;
+      margin: 0;
+    }
+
+    .container {
+      height: 100vh;
+      display: grid;
+      gap: 3rem;
+      grid-template-columns: 1fr 1fr 1.5fr;
+      grid-template-rows: 1fr 1fr;
+    }
+
+    .item {
+      font-size: 5rem;
+      color: white;
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: blueviolet;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+    }
+
+    .cowboy {
+      background-color: #00B9FF;
+      grid-column: span 2;
+    }
+
+    .astronaut {
+      background-color: #03989E;
+      order: 1;
+
+      /* TODO: Make the astronaut box look like the goal2 image. */
+      grid-column: span 2;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="item cowboy">🤠</div>
+    <div class="item astronaut">👨‍🚀</div>
+    <div class="item book">📖</div>
+  </div>
+</body>
+
+</html>

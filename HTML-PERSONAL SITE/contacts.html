@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact me</title>
+    <link rel="stylesheet" href="./styles/external.css">
+</head>
+<body>
+    <ul>
+        <li><strong>Phone no.</strong>- 9503325686</li>
+        <li><strong>Email address</strong>- btech10441.21@bitmesra.ac.in</li>
+    </ul>
+    <form action="mailto:76sunils@gmail.com" method="post" enctype="text/plain"> <!-- action attribute takes you to a specified destination e.g. if you write index.html then it will take you to your homepage and here i have written mailto which takes you to the mail client and the to will be set to the given email address-->
+        <!-- the attribute method="post" specifies that transfer the data to the action destination-->
+        <!--enctype is encoding type which is actually set to utf-8 so it shows some wierd characters when the email client opens up in the subject section of the email after yourName,yourPhoneNo,yourEmail,yourMessage so we set enctype to plain text-->
+        <label >Your name: </label>
+        <input type="text" name="yourName"><br><!--the name attribute value gets displayed at the place where action is set like in email app like yourName=Aditya-->
+        <label > Phone no: </label>
+        <input type="number" name="yourPhoneNo"><br><!--this will allow only numbers which is kinda great-->
+        <label >Your Email: </label>
+        <input type="email" name="yourEmail"><br><!--we have used email here instead of text as it gives a validation check too to our email input-->
+        <label >Your Message</label><br>
+        <!--now to have some area where you can enter lot of text then textarea is used where rows and cols given by the developer define the initial size of the textbox which can be dragged by the user to increase size-->
+        <textarea name="yourMessage" rows="10" cols="30"></textarea><br>
+        <label>Do you agree to share your data with us?</label>
+        <input type="checkbox"><br>
+        <input type="submit"><br>
+        <!--
+        <label>Password:</label>
+        <input type="password"><br>
+        <input type="file"><br>
+        <input type="radio"><br>
+        <input type="range"><br>
+        <input type="date"><br>
+        <input type="color">
+        -->
+    </form>
+</body>
+</html>

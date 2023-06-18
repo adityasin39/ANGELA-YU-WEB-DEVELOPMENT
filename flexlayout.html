@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<!--
+    To understand this more head over to https://appbrewery.github.io/flex-layout/ and change the size of the screen and observe the changes.
+1.Order property
+It is set on child.
+In the Flexbox layout, the order property is used to control the order in which flex items are displayed within a flex container. By default, flex items are displayed in the order they appear in the source code, but the order property allows you to modify this order.
+The order property accepts an integer value, which determines the display order of the flex items. Items with a lower order value will appear before items with a higher order value. If multiple items have the same order value, their order will be based on their position in the source code.
+by default the value of order is 0 for all children.
+2.flex-wrap
+It is set on parent.
+the flexbox takes up full width of the screen (here the flex-direction is row) and if the elements go on stacking onto the right then at one time they would run out of space and the newly added ones would be invisible and they wont go onto the next line, this is because the flex-wrap is set to nowrap.
+To solve this we can set flex-wrap to wrap so all the elements go to the next line which are not able to fit on the same line as we shrink our screen.
+flex-wrap:wrap-reverse ->if the flex items within the flex container exceed the available width, they will wrap onto multiple lines, starting from the bottom and proceeding in reverse order compared to the default wrapping direction.
+
+Here's how the wrapping order behaves with flex-wrap: wrap-reverse:
+
+In the default wrapping direction (flex-wrap: wrap), items wrap from top to bottom.
+With flex-wrap: wrap-reverse, items wrap from bottom to top.
+It's important to note that the reverse order applies to each line of wrapped items individually. The items on each line will still be displayed in their original order, only the lines themselves will be in reverse order.
+
+In summary, flex-wrap: wrap-reverse is used to make flex items wrap onto multiple lines, starting from the bottom and proceeding in reverse order compared to the default wrapping direction.
+To understand this more head over to https://appbrewery.github.io/flex-layout/
+3.justify-content
+It is set on the parent.
+The justify-content property is a fundamental property in CSS Flexbox that is used to control the alignment and distribution of flex items along the main axis of a flex container. It determines how extra space is distributed within the container.
+If there is no extra space then you wont be able to see the alignment.
+Here are the possible values for the justify-content property:
+flex-start: This is the default value. It aligns the flex items at the start of the flex container's main axis.
+flex-end: It aligns the flex items at the end of the flex container's main axis.
+center: It centers the flex items along the flex container's main axis.
+space-between: It evenly distributes the flex items along the main axis. The first item is positioned at the start, the last item is positioned at the end, and the remaining items are distributed with equal space between them.
+space-around: It evenly distributes the flex items along the main axis, but with equal space around them. This means that the space between flex items is divided equally and half of that space is placed before the first item and after the last item.
+space-evenly: It evenly distributes the flex items along the main axis with equal space before the first item, between each item, and after the last item.
+4.align-items
+property of the parent.
+This only works if the flex-wrap is set to nowrap.
+To see this property work, the container must have some height greater than the content height. The height can be something like 70vh(viewport height) which is 70% of the screen height.
+The align-items property is another key property in CSS Flexbox that is used to control the alignment and positioning of flex items along the cross axis of a flex container. It determines how flex items are aligned vertically within the container.
+
+Here are the possible values for the align-items property:
+
+stretch: This is the default value. It stretches the flex items to fill the entire cross-axis of the flex container. If the flex items have a fixed height, they will be stretched to match the container's height.
+flex-start: It aligns the flex items at the start of the cross axis.
+flex-end: It aligns the flex items at the end of the cross axis.
+center: It centers the flex items along the cross axis.
+baseline: It aligns the flex items such that their baselines align.
+If you want to have a particular flex item from a list of flex items which are set to align-items:center to have its own alignment across the cross axis then you can use align-self:flex-start or anything on the child item itself.
+To learn more about flexbox head over to https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+5.align-content
+property of parent.
+works only when the flex-wrap is set to wrap and you shrink the screen size.
+align-content is a CSS property that is used to align the content of a flex container along the cross-axis. It applies to a flex container and works when the container has multiple lines of flex items.
+The align-content property accepts various values to control the alignment of flex items along the cross-axis:
+
+stretch (default): This is the default value, which stretches the flex items to fill the container along the cross-axis.flex lines stretch to take up the remaining space.
+
+flex-start: Aligns the flex items to the start of the cross-axis.
+
+flex-end: Aligns the flex items to the end of the cross-axis.
+
+center: Aligns the flex items to the center of the cross-axis.
+
+space-between: Distributes the flex items evenly along the cross-axis, with the first item aligned to the start and the last item aligned to the end.
+
+space-around: Distributes the flex items evenly along the cross-axis, with equal space before the first item and after the last item.
+
+space-evenly: Distributes the flex items evenly along the cross-axis, with equal space between them.
+
+safe center: Similar to center, but ensures that the items stay within the container's content box, taking into account any scrollable areas.
+
+unsafe center: Similar to center, but doesn't consider any scrollable areas, potentially causing the items to overflow the container.
+For complete practice of this topic go to https://appbrewery.github.io/flexboxfroggy/ and study levels 8,10,14,15,16,17,18,19,20,21,23,24. It has new things too.
+-->    
+</body>
+</html>

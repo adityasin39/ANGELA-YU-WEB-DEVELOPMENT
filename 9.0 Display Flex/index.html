@@ -1,0 +1,45 @@
+<!--flexbox is used by wrapping all the elements that you want to flex in a div and then we target the div and change its display property to flex ,by doing this all the elements of the div come in the same line with their tops starting from the same line and you can use a property called gap to have some gap between these elements.
+although flex is a value of the display property but consider this to be a very different system from the normal display property values. When you flex the html elements then no longer follow their diplay rules like block,inline,etc instead they are stacked in a line and this rule applies to all the elements but the flexbox can be considered as a block element as it takes up the entire width of the screen and does not allow others to come on the same line.But there is something like display:inline-flex by which you can have other elements too on the same line and the flexbox takes up the width equal to the width of the content of the elements inside it just like inline elements.
+The width of each element in a flexbox will be according to its content size.-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Column Layout Methods</title>
+  <style>
+    p {
+      padding: 0;
+      margin: 0;
+      font-weight: 700;
+    }
+
+    li {
+      list-style: none;/*to get rid of the bullet points.*/
+    }
+
+    .container {
+      display:flex;
+      gap:10px;
+      padding: 10px;
+      background-color: gold;
+    }
+
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <p>Page Layout Methods</p>
+
+    <li><a href="./html-table.html">HTML Table</a></li>
+    <li><a href="./inline-block.html">Inline-Block</li>
+    <li><a href="./absolute-position.html">Absolute Positioning</li>
+    <li><a href="./float.html">Float</li>
+    <li><a href="./flex.html">Flexbox</li>
+
+  </div>
+</body>
+
+</html>

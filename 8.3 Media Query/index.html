@@ -1,0 +1,61 @@
+<!--We can make our website responsive for e.g. if there is a heading which is large for a laptop then on viewing the same website on a phone it becomes smaller. This responsiveness can be achieved via 1.Media Queries 2.Grid 3.Flexbox 4.Bootstrap
+Media queries
+we write media@ (max-width: or min-width:){element{}} by doing this we can have our website which changes its style according to different screen sizes.
+We can also have multiple conditions by using 'and' as you can see in the style tag below.The thing that we write in the () is the query.By default after @ screen word is there so no need to write it manually.The alternative to screen is print. The query can be orientation:landscape too and there are many more. 
+To check the responsiveness head over to 8.2 responsiveness folder. -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- 
+TODO: Change the background color for each device
+[lightsalmon] Mobile Devices: 319px — 480px
+[powderblue] iPads and Tablets: 481px — 1200px
+[limegreen] Laptops: 1201px — 1600px
+[seagreen] Desktops: 1601px and more
+-->
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+  <title>Media Query</title>
+  <style>
+    body {
+      background-color: aquamarine;
+    }
+    @media(max-width:480px) and (min-width:319px)
+    {
+      body
+      {
+        background-color: lightsalmon;
+      }
+    }
+    @media(max-width:1200px) and (min-width:481px)
+    {
+      body
+      {
+        background-color: powderblue;
+      }
+    }
+    @media(max-width:1600px) and (min-width:1201px)
+    {
+      body
+      {
+        background-color:limegreen;
+      }
+    }
+    @media(min-width:1601px)
+    {
+      body
+      {
+        background-color: lightsalmon;
+      }
+    }
+
+  </style>
+</head>
+
+<body>
+</body>
+
+</html>

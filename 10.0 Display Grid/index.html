@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<!--Grid is used for 2d layout and flexbox is used for 1d layout but with the help of a grid we can make a 1d layout too. The default behaviour of a grid is to take the full width of a container and the height is equal to the content size. Also the grid which is 1d, on shrinking the size tries to make a grid i.e. a table like structure with rows and columns. To understand this more head over to https://appbrewery.github.io/grid-vs-flexbox/
+
+ -->
+
+<head>
+  <title>Chessboard</title>
+  <style>
+    /* Write your code here */
+    /* Each square should be 100px by 100px */
+    /* My colours for white: #f0d9b5, black: #b58863 */
+   .container > *
+   {
+    width:100px;
+    height:100px;
+   }
+   .black
+   {
+    background-color:#b58863;
+   }
+   .white
+   {
+    background-color: #f0d9b5;
+   }
+   .container
+   {
+    display:grid;/*this itself doesnt do anything.*/
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;/*these are mandatory to write.These are the ratios of sizes of different cols.Go to example.html's preview to see this.*/
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    width:800px;/* as grid takes up full width and the boxes get separated to take up the full width so we have reduced the width.*/
+   }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="white"></div>
+    <div class="black"></div>
+    <div class="white"></div>
+    <div class="black"></div>
+    <div class="white"></div>
+    <div class="black"></div>
+    <div class="white"></div>
+    <div class="black"></div>
+    <div class="black"></div>
+    <div class="white"></div>
+    <div class="black"></div>
+    <div class="white"></div>
+    <div class="black"></div>
+    <div class="white"></div>
+    <div class="black"></div>
+    <div class="white"></div>
+    <div class="white"></div>
+    <div class="black"></div>
+    <div class="white"></div>
+    <div class="black"></div>
+    <div class="white"></div>
+    <div class="black"></div>
+    <div class="white"></div>
+    <div class="black"></div>
+    <div class="black"></div>
+    <div class="white"></div>
+    <div class="black"></div>
+    <div class="white"></div>
+    <div class="black"></div>
+    <div class="white"></div>
+    <div class="black"></div>
+    <div class="white"></div>
+    <div class="white"></div>
+    <div class="black"></div>
+    <div class="white"></div>
+    <div class="black"></div>
+    <div class="white"></div>
+    <div class="black"></div>
+    <div class="white"></div>
+    <div class="black"></div>
+    <div class="black"></div>
+    <div class="white"></div>
+    <div class="black"></div>
+    <div class="white"></div>
+    <div class="black"></div>
+    <div class="white"></div>
+    <div class="black"></div>
+    <div class="white"></div>
+    <div class="white"></div>
+    <div class="black"></div>
+    <div class="white"></div>
+    <div class="black"></div>
+    <div class="white"></div>
+    <div class="black"></div>
+    <div class="white"></div>
+    <div class="black"></div>
+    <div class="black"></div>
+    <div class="white"></div>
+    <div class="black"></div>
+    <div class="white"></div>
+    <div class="black"></div>
+    <div class="white"></div>
+    <div class="black"></div>
+    <div class="white"></div>
+  </div>
+</body>
+
+</html>

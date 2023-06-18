@@ -1,0 +1,19 @@
+/* Write your code here: */
+h1, h2
+{
+    color:blueviolet; /*in grouping, we use , and the property is applied to the whole group.It can be any selector(id,class,element,attribute).*/
+}
+div > p{
+    color:firebrick;/*in parent child, we write parent-selector > child-selector.The child should be the direct child and not grandchild.It gets applied to the child. We can also write .box > p*/
+}
+.box li{
+    color:blue;/*in ancestor-descendant, we write ancestor descendant{}. Here we use space between the selectors.The descendant can be grandchild too, actually any child. We can also write .list li{}.*/
+}
+li.done
+{
+    color:seagreen;/*in chainselector, we write a chain of selectors without any space to be very specific about the element on which the rule is to be applied.The first selector must be the element which you are targetting.So here it will first check all the li and then will finally apply the property on those li which have class="done".*/
+} 
+ul > p.done
+{
+    font-size:0.5rem;/* we have combined combiners here.you can combine the combiners in any way that you wish to.*/
+}

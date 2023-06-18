@@ -1,0 +1,60 @@
+/* we have different type of selectors in css like we have tag, class and id selectors*/
+/* comments in css are done by using /*.   */
+/* tag selector or element selector*/
+
+h1{
+    color:blueviolet; 
+    font-size:100px;
+}
+p{
+    color:chocolate;
+    font-size: 20px;
+}
+img:hover{  /* if there were only img then it would have been overridden by the class and id selectors but here we have a psuedo class hover.A pseudo class starts with a colon*/
+    background-color: chartreuse;
+}
+body{
+    background-color:darkturquoise;
+}
+/* class selector*/
+/* these are more specific than tag ones but less specific than id and an element can have more than one classes but can have only one id. Also on a single page the id name is always unique whereas there can be same class in multiple elements. The order of priority is id->class->tag */
+/* to use a class we have to write . and then class name whereas to use an id we write # then id name */
+/* if we use tag selector then all the occurrences of the same element get affected but to have specific changes we have to use class or id*/
+
+.pizza
+{
+    background-color: fuchsia;
+}
+.tasty
+{
+    border-radius:100% ;
+}
+.burger
+{
+    background-color: darkorchid;
+    border-radius:100%;
+}
+/* id selector*/
+/* if i want to have a specific change for a unique element then id selector can be used*/
+#heading
+{
+    color: deeppink;
+}
+#first-paragraph
+{
+    color:greenyellow;
+    font-size: 100px;
+}
+/*attribute selector*/
+/* in this we write the element on which the css is to be applied and then in square bracket, we write the attribute name and we can also write the attribute value to be more specific*/
+p[draggable="true"] /* if we write only draggable and not specify the value then it will get applied to all the p tags*/ 
+{
+    color:crimson;  
+}
+p[draggable="false"]
+{
+    color:darkorange;
+}
+/*universal selector
+*{
+    color:red; this gets applied to everything blindly */

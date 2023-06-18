@@ -1,0 +1,221 @@
+.top-container
+{
+    background-color: greenyellow;
+    padding-top:100px;
+}
+.middle-container
+{
+    background-color: crimson;
+    height: 200px;
+    width:200px;  
+}
+.bottom-container
+{
+    background-color: cyan;
+    height: 200px;
+    width:200px;
+   
+}
+body{
+    margin:0; 
+    text-align:center;
+    font-family: sans-serif;
+ }
+ h1{
+     margin-top:0;
+     font-family: 'Montez', cursive;
+ }
+ p{
+    font-family: 'Montserrat', sans-serif;
+ }
+ span{
+    text-decoration:underline;
+ }
+ .bottom-cloud
+ {
+    position:absolute;
+ }
+ .top-cloud
+ {
+  position:relative;
+  left:180px;
+
+ }
+/*
+these were the boxes that we were using before centering topic
+.top-container
+{
+    background-color: greenyellow;
+    height: 200px; 
+    width: 200px;
+}
+.middle-container
+{
+    background-color: crimson;
+    height: 200px;
+    width:200px;  
+}
+.bottom-container
+{
+    background-color: cyan;
+    height: 200px;
+    width:200px;
+   
+}
+body{
+    margin:0; 
+ }
+ h1{
+     margin-top:0;
+ }
+ span{
+    text-decoration:underline;
+ }
+*/
+
+/* box ko edges pe chipkane ke liye
+body{
+   margin:0; margin on all sides will become 0
+}
+h1{
+    margin-top:0;
+}
+*/
+ /*every element is a box so each element has its own box model which contains the actual box with some height and width and then the padding and border and margin.
+ The total size of a div is actually the height*width area+padding area+border area+margin area although if there is some bg color then it extends only upto the padding area.
+ Padding in the case of a div is the space between the top line of the div and the top of the first content. By default padding is zero in case of a div so on giving a padding of like 20px the content(here it is h1) gets shifted by 20px downwards and the length of the div increases at the bottom by 20px pushing the next div element downwards if the next div element is adjacent to it.
+ padding-top:20px; or if i write padding:20px then it gets applied to all sides as it is the circular shorthand
+ Actually what happens is if we write padding-top:20px then an extra 20px is created in the div at the top and assume that the previous div is pushed downwards and if there is another div adjacent to it then it is pushed too.
+ If there is blank space on the top then the previous div is not pushed down.Think in terms of blank space and then you will easily understand how padding is working.
+ The concept of padding is the same for each elements of the div be it heading or paragraph. If padding-top:20px then if there is space above the content then no content will be moved and padding will be applied above the top but if there is no space at the top then the content below will have to be pushed downwards and then padding will be created at the top.Think in the same way for left,right and bottom and if you dont understand then use chrome developer tools.
+ Now if you apply bg color to h1 after padding then the area that the bg color includes will have the padding area too indicating that for h1 the size of the box model has increased.
+ Border can be used to have border-style like border-style:dotted and we can also set border-width by specifying border-top-width:20px or to any side of the box and by having border the other elements automatically get pushed always if they are adjacent or are having a margin between them.
+ Actually i was wrong before the bg color of a div extends upto the border not upto the padding only and this can be seen if you select the border-style to be dotted.
+ Margin is the space between two divs or any two different elements and this margin is always maintained even if the size of the box increases and this can be done by margin-top,margin-left and so on and you can always use the circular shorthand to set all these box model properties.
+ Divs always push other divs if space is less.
+ If the page gets full in either vertical or horizontal sides due to increase in size of div or due to the pushing of a div then page size increases to adjust it.
+ A div by default has no margin,border or padding.
+ If the width of a container is not mentioned then as div is a block element so it takes up whole screen width and in this case on doing padding or margin the actual area of the div decreases if it doesnt fit on the screen and no scrollbar gets pulled up.
+ Padding doesnt pad the background image and the background color.
+ You can refer to the bookmarked codepen interactive box model.*/
+ /* the following is the code to get the three boxes touch corner to corner where the boxes's initial state can be described by the above code for top,middle and bottom container.
+ the padding and border were given in the challenge
+ .top-container
+{
+    background-color: greenyellow;
+    height: 200px;
+    width:200px;
+    border-style:solid;
+    border-width:10px;
+    padding:20px;
+}
+.middle-container
+{
+    background-color: crimson;
+    height: 200px;
+    width:200px;
+    border-style:solid;
+    border-width:20px;
+    margin-left:260px;
+}
+.bottom-container
+{
+    background-color: cyan;
+    height: 200px;
+    width:200px;
+    border-style:solid;
+    border-width:10px;
+    margin-left:500px;
+}*/
+/*
+This is the code to get all the three vertical order boxes in a line such that the middle one is the first and the first one is the last.
+Although these are block elements but as they have width which is not 100% of the screen so they can have other block elements on the same line.
+.top-container
+{
+    background-color: greenyellow;
+    height: 200px; 
+    width: 200px;
+    position:relative;
+    left:400px;
+}
+.middle-container
+{
+    background-color: crimson;
+    height: 200px;
+    width:200px;
+    position:relative;
+    bottom:200px;
+}
+.bottom-container
+{
+    background-color: cyan;
+    height: 200px;
+    width:200px;
+    position:relative;
+    left:200px;
+    bottom:400px;
+}
+*/
+/*This is another way to make three divs inline with each other and to change their positions*/
+/*html code
+<div class="top"></div>
+<div class="middle"></div>
+<div class="bottom"></div>
+css code
+.top
+{
+  background-color:red;
+  height:100px;
+  width:100px;
+  display:inline-block; to get the divs in the same line
+  position:relative;
+  left:200px;
+}
+.middle
+{
+  background-color:blue;
+   height:100px;
+  width:100px;
+  display:inline-block;
+  position:relative;
+  right:100px;
+}
+.bottom
+{
+  background-color:yellow;
+   height:100px;
+  width:100px;
+  display:inline-block;
+  position:relative;
+  right:100px;
+}
+run this in codepen here we get some inconsistent spaces and this is due to browser which adds some space after inline-block elements.*/
+/*this code is to use absolute positioning and have the 3 boxes in an arrangement where the third box will be the first and then the second box will be below it and touching the corner and the third box will be below the second box and will be touching the corner.
+.top-container
+{
+    background-color: greenyellow;
+    height: 200px; 
+    width: 200px;
+    position:absolute;
+    top:400px;
+    left:400px;
+}
+.middle-container
+{
+    background-color: crimson;
+    height: 200px;
+    width:200px;
+    position:absolute;
+    top:200px;
+    left:200px;
+  
+}
+.bottom-container
+{
+    background-color: cyan;
+    height: 200px;
+    width:200px;
+    position:absolute;
+    top:0;
+}
+*/

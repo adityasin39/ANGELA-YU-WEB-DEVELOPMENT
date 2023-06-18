@@ -1,0 +1,46 @@
+<!--In CSS, we have cascading which means that if multiple css rules target the same element property then there will be a cascade of priority in which the decisions will be made.
+In a cascade, the lower ones are more important. The 4 categories of cascading are position->specificity->type->importance and these too are like a cascade i.e. the lower one importance has the highest priority .
+In position, the rule which is lower on the page has higher priority, in specificity-the highest to lowest order is id->attribute->class->element so the id selector's value will get applied finally.
+In type, the highest to lowest order is inline->internal->external, in importance, if you write !important then it will be given the highest priority.
+To understand it more better refer to cascading image in 7.0 CSS Cascade folder
+The order is such that , first the low priority rules are considered and then the higher priority ones like for e.g first element selectors will be run then class then attribute and finally id similarly first external styles will be applied then internal then inline. This is how the cascade works.In the same way first position is checked then speficity then type and then importance.
+Q. <h1 class="first second">Hello</h1>
+    .first{
+      color:blue;
+    }
+    .second
+    {
+      color:red;
+    }
+    ans. the final color will be red because .second is below .first so following the position category.
+    Q.<style>
+      #an-id{color:green;} </style>
+      <h1 id="an-id" style="color:blue;">Hello</h1>
+      Ans. here although id is more specific than style(which is an attribute) but type has higher priority than specificity so the final color will be blue ->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>CSS Cascade</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+  <div id="outer-box" class="box">
+    <div class="box">
+      <p>Yellow Text</p>
+      <div class="box inner-box">
+        <p class="white-text">White Text</p>
+      </div>
+    </div>
+    <div class="box">
+      <p>Yellow Text</p>
+      <div class="box inner-box">
+        <p class="white-text">White Text</p>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
